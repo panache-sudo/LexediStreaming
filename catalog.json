@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Sample Public-Domain Film",
+    "year": "1930",
+    "description": "A sample item from Internet Archive.",
+    "poster_url": "https://archive.org/services/img/identifier",
+    "stream_url": "https://archive.org/download/identifier/identifier.mp4",
+    "playpage_url": "https://archive.org/details/identifier",
+    "embed_url": null,
+    "source_name": "Internet Archive",
+    "country": "US",
+    "tags":["classic"]
+  }
+]
