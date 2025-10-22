@@ -1,3 +1,1 @@
-
-``` |
-| **Commit Message** | something like:
+{{ JSON.stringify($json["movies"], null, 2) }}
