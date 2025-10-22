@@ -13,6 +13,29 @@
       "poster": "https://archive.org/services/get-item-image.php?identifier=TV-RTS1&mediatype=collection&collection=tvarchive",
       "stream_url": "https://archive.org/details/TV-RTS1",
       "description": "RTS 1 is the oldest television station in Serbia, offering entertainment and news programming."
+    },
+    {
+      "title": "Shaka iLembe",
+      "year": 2023,
+      "poster": "https://m.media-amazon.com/images/M/MV5BNGVhZDQ0ZmEtZjA3MC00N2U1LWEyZWYtZTk2ODUxZDJhMDdmXkEyXkFqcGc@._V1_.jpg",
+      "stream_url": "https://archive.org/download/ShakaILembe/ShakaILembe.mp4",
+      "description": "An epic South African historical drama that chronicles the rise of the Zulu king Shaka iLembe."
+    },
+    {
+      "title": "Zulu Wedding",
+      "year": 2019,
+      "poster": "https://m.media-amazon.com/images/M/MV5BYzFkM2IwMzItZjE4Yy00OTliLWI4MTAtYzljOTI4ZWM4Y2UyXkEyXkFqcGc@._V1_.jpg",
+      "stream_url": "https://archive.org/download/ZuluWedding/ZuluWedding.mp4",
+      "description": "A South African romantic comedy about culture, love, and the beauty of bridging traditions."
+    },
+    {
+      "title": "The Great Train Robbery",
+      "year": 1903,
+      "poster": "https://archive.org/download/greattrainrobbery/greattrainrobbery.jpg",
+      "stream_url": "https://archive.org/download/greattrainrobbery/greattrainrobbery.mp4",
+      "description": "A pioneering silent film often regarded as the first American action movie."
     }
   ]
 }
+``` |
+| **Commit Message** | `Auto-update catalog from n8n` |
