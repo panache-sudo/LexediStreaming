@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Free Streaming Catalog</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Free Movie Stream</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #111; color: #eee; text-align: center; }
-    .movie { display: inline-block; margin: 10px; width: 200px; }
-    img { width: 100%; border-radius: 10px; }
+    body { font-family: Arial, sans-serif; background:#111; color:#eee; margin:0; }
+    h1 { text-align:center; padding:20px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:15px; padding:20px; }
+    .card { background:#222; border-radius:10px; padding:10px; box-shadow:0 0 10px #0005; transition:0.3s; }
+    .card:hover { transform:scale(1.03); }
+    img { width:100%; border-radius:10px; }
+    a { color:#0af; text-decoration:none; }
   </style>
 </head>
 <body>
-  <h1>🎬 My Streaming Library</h1>
-  <div id="movies"></div>
+  <h1>🎬 My Free Streaming Catalog</h1>
+  <div class="grid" id="movieGrid">Loading...</div>
 
   <script>
-    const catalogURL = "https://raw.githubusercontent.com/panache-sudo/LexediStreaming/refs/heads/main/catalog.json";
-    fetch(catalogURL)
-      .then(res => res.json())
-      .then(data => {
-        const container = document.getElementById("movies");
-        data.forEach(movie => {
-          const div = document.createElement("div");
-          div.className = "movie";
-          div.innerHTML = `
-            <img src="${movie.poster}" alt="${movie.title}">
-            <h3>${movie.title}</h3>
-            <p>${movie.year}</p>
-            <a href="${movie.stream}" target="_blank">▶ Watch</a>
-          `;
-          container.appendChild(div);
-        });
-      });
+    async function loadCatalog() {
+      const url = "https://raw.githubusercontent.com/panache-sudo/LexediStreaming/refs/heads/main/catalog.json";
+      const grid = document.getElementById("movieGrid");
+      try {
+        const res = await fetch(url);
+        const data = await res.json();
+
+        grid.innerHTML = data.movies.map(m => `
+          <div class="card">
+            <img src="${m.poster}" alt="${m.title}">
+            <h3>${m.title}</h3>
+            <p>${m.year || ''}</p>
+            <a href="${m.stream_url}" target="_blank">▶ Watch Now</a>
+          </div>
+        `).join('');
+      } catch (err) {
+        grid.innerHTML = "<p>Error loading catalog 😢</p>";
+      }
+    }
+
+    loadCatalog();
   </script>
 </body>
 </html>
