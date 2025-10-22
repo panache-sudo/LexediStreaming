@@ -2,16 +2,17 @@
   "movies": [
     {
       "title": "Globovision",
-      "link": "https://archive.org/details/TV-GLOBOVISION",
-      "description": "<img width=\"160\" style=\"padding-right:3px;float:left;\" src=\"https://archive.org/services/get-item-image.php?identifier=TV-GLOBOVISION&mediatype=collection&collection=tvarchive\"/><p>Globovision is a 24-hour television news network. It broadcasts over-the-air in Caracas, Aragua, Carabobo and Zulia on UHF channel 33..</p>",
-      "poster_url": "https://archive.org/services/get-item-image.php?identifier=TV-GLOBOVISION&mediatype=collection&collection=tvarchive"
+      "year": 2024,
+      "poster": "https://archive.org/services/get-item-image.php?identifier=TV-GLOBOVISION&mediatype=collection&collection=tvarchive",
+      "stream_url": "https://archive.org/details/TV-GLOBOVISION",
+      "description": "Globovision is a 24-hour television news network broadcasting in Caracas and other regions of Venezuela."
     },
     {
       "title": "RTS1",
-      "link": "https://archive.org/details/TV-RTS1",
-      "description": "<img width=\"160\" style=\"padding-right:3px;float:left;\" src=\"https://archive.org/services/get-item-image.php?identifier=TV-RTS1&mediatype=collection&collection=tvarchive\"/><p>RTS 1 is the oldest television station in Serbia...</p>",
-      "poster_url": "https://archive.org/services/get-item-image.php?identifier=TV-RTS1&mediatype=collection&collection=tvarchive"
+      "year": 2024,
+      "poster": "https://archive.org/services/get-item-image.php?identifier=TV-RTS1&mediatype=collection&collection=tvarchive",
+      "stream_url": "https://archive.org/details/TV-RTS1",
+      "description": "RTS 1 is the oldest television station in Serbia, offering entertainment and news programming."
     }
-    // (you can paste the rest of your entries here in the same pattern)
   ]
 }
