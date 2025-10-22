@@ -47,3 +47,41 @@ load();
 </script>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Free Streaming Catalog</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #111; color: #eee; text-align: center; }
+    .movie { display: inline-block; margin: 10px; width: 200px; }
+    img { width: 100%; border-radius: 10px; }
+  </style>
+</head>
+<body>
+  <h1>🎬 My Streaming Library</h1>
+  <div id="movies"></div>
+
+  <script>
+    const catalogURL = "https://raw.githubusercontent.com/panache-sudo/LexediStreaming/main/catalog.json";
+    fetch(catalogURL)
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById("movies");
+        data.forEach(movie => {
+          const div = document.createElement("div");
+          div.className = "movie";
+          div.innerHTML = `
+            <img src="${movie.poster}" alt="${movie.title}">
+            <h3>${movie.title}</h3>
+            <p>${movie.year}</p>
+            <a href="${movie.stream}" target="_blank">▶ Watch</a>
+          `;
+          container.appendChild(div);
+        });
+      });
+  </script>
+</body>
+</html>
